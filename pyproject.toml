@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "sample-api"
+version = "0.1.0"
+description = "Sample API created for testing and learning purposes"
+authors = ["Muzaffar Shaikh <114210961+MuzaffarShaikh0201@users.noreply.github.com>"]
+license = "MIT License"
+readme = "README.md"
+packages = [{include = "src"}]
+
+
+[tool.poetry.dependencies]
+python = "^3.13"
+fastapi = {extras = ["standard"], version = "^0.115.12"}
+pydantic-settings = "^2.8.1"
+
+
+[tool.poetry.scripts]
+api = "src.run:prod_mode"
+dev = "src.run:dev_mode"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
