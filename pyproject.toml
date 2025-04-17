@@ -15,8 +15,7 @@ pydantic-settings = "^2.8.1"
 
 
 [tool.poetry.scripts]
-api = "src.run:prod_mode"
-dev = "src.run:dev_mode"
+sample-api = "src.run:run_sample_api"
 
 
 [build-system]
